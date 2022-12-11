@@ -1,0 +1,62 @@
+.grid-container {
+    display: grid;
+    height: 50rem;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'one two four' 'one two four-low';
+    gap: 1.3rem;
+    margin-top: 1.3rem;
+}
+
+.featured {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.main-description {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: white;
+    font-size: 3.8rem;
+    font-weight: 600;
+}
+
+.featured img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.grid-one {
+    grid-area: one;
+}
+
+.grid-two {
+    grid-area: two;
+}
+
+.grid-four {
+    grid-area: four;
+}
+
+.grid-four-low {
+    grid-area: four-low;
+}
+
+.lil-overlay,
+.hard-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in;
+}
+
+.hard-overlay {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
