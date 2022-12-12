@@ -1,0 +1,41 @@
+.proud-container {
+    padding: 10rem 0;
+}
+
+.proud-h2 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin-bottom: 4.2rem !important;
+}
+
+.product {
+    outline: 2px solid rgba(0, 0, 0, .205);
+    outline-offset: -2px;
+    transition: all 0.15s ease-in;
+    cursor: pointer;
+}
+
+.product:hover {
+    outline: 2px solid rgba(0, 0, 0, .7);
+}
+
+.product-header img {
+    width: 100%;
+}
+
+.product-details {
+    font-size: 1.7rem;
+    padding: 1rem;
+}
+
+.item-price {
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-top: 1.4rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}

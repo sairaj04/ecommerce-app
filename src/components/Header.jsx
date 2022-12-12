@@ -1,11 +1,11 @@
-import "./Home.css";
-import Main1 from "../img/home-img-1.jpg";
-import Main2 from "../img/home-img-2.jpg";
-import Main3 from "../img/home-img-3.jpg";
-import Main4 from "../img/home-img-4.jpg";
+import "./Header.css";
+import Main1 from "../img/header/home-img-1.jpg";
+import Main2 from "../img/header/home-img-2.jpg";
+import Main3 from "../img/header/home-img-3.jpg";
+import Main4 from "../img/header/home-img-4.jpg";
 import { useState } from "react";
 
-function Main() {
+function Header() {
   const [overlay, setOverlay] = useState(false);
 
   function inOverlay() {
@@ -23,8 +23,8 @@ function Main() {
           <div className="grid-container">
             <div className="featured grid-one">
               <div
-                id="1"
-                className={overlay ? "hard-overlay" : "lil-overlay"}
+                id="img1"
+                className="lil-overlay"
                 onMouseEnter={inOverlay}
                 onMouseLeave={outOverlay}
               ></div>
@@ -33,8 +33,8 @@ function Main() {
             </div>
             <div className="featured grid-two">
               <div
-                id="2"
-                className={overlay ? "hard-overlay" : "lil-overlay"}
+                id="img2"
+                className="lil-overlay"
                 onMouseEnter={inOverlay}
                 onMouseLeave={outOverlay}
               ></div>
@@ -43,8 +43,8 @@ function Main() {
             </div>
             <div className="featured grid-four">
               <div
-                id="3"
-                className={overlay ? "hard-overlay" : "lil-overlay"}
+                id="img3"
+                className="lil-overlay"
                 onMouseEnter={inOverlay}
                 onMouseLeave={outOverlay}
               ></div>
@@ -53,8 +53,8 @@ function Main() {
             </div>
             <div className="featured grid-four-low">
               <div
-                id="4"
-                className={overlay ? "hard-overlay" : "lil-overlay"}
+                id="img4"
+                className="lil-overlay"
                 onMouseEnter={inOverlay}
                 onMouseLeave={outOverlay}
               ></div>
@@ -68,4 +68,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Header;
