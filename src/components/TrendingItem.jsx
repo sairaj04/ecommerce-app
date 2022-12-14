@@ -1,16 +1,21 @@
 import "./TrendingSlider.css";
+import { items } from "./Data";
 
-function TrendingItem({ img, price, description }) {
+function TrendingItem() {
   return (
-    <div className="row-item">
-      <div className="item-header">
-        <img src={img} alt="product" />
-      </div>
-      <div className="item-description">
-        <p>{description}</p>
-        <p className="item-price">{price}</p>
-      </div>
-    </div>
+    <>
+      {items.map((item) => (
+        <div key={item.id} className="row-item">
+          <div className="item-header">
+            <img src={item.img} alt="product" />
+          </div>
+          <div className="item-description">
+            <p>{item.description}</p>
+            <p className="item-price">{item.price}$</p>
+          </div>
+        </div>
+      ))}
+    </>
   );
 }
 

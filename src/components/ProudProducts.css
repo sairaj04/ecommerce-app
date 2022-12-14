@@ -56,7 +56,7 @@
     }
 }
 
-@media (max-width:400px) {
+@media (max-width:430px) {
     .products-grid {
         grid-template-columns: 1fr;
     }
