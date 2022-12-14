@@ -46,6 +46,8 @@
 
 .img-side img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .text button {
@@ -64,4 +66,20 @@
 .text button:hover {
     background-color: transparent;
     color: black;
+}
+
+@media (max-width:750px) {
+    .text-side {
+        padding: 0 4rem;
+    }
+}
+
+@media (max-width:600px) {
+    .text-side {
+        width: 100%;
+    }
+
+    .img-side {
+        display: none;
+    }
 }

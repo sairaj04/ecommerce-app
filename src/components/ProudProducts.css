@@ -39,3 +39,25 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2rem;
 }
+
+@media (max-width:750px) {
+    .products-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width:600px) {
+    .products-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width:400px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -31,3 +31,15 @@
     border: none;
     cursor: pointer;
 }
+
+@media (max-width:400px) {
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    .news input {
+        margin-right: 0;
+    }
+}

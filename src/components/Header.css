@@ -77,3 +77,33 @@
 #img4:hover {
     background-color: rgba(0, 0, 0, 0.5) !important;
 }
+
+@media (max-width:750px) {
+    .grid-container {
+        height: 500px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "one two"
+            "four four-low";
+        grid-gap: 13px;
+        gap: 13px;
+    }
+}
+
+@media (max-width:450px) {
+    .main-description {
+        bottom: 1rem;
+        left: 1rem;
+        font-size: 3rem;
+    }
+}
+
+@media (max-width:400px) {
+    .main-description {
+        bottom: 1rem;
+        left: 0.5rem;
+        font-size: 2.5rem;
+    }
+}

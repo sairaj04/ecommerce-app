@@ -24,7 +24,7 @@ function Navbar() {
       >
         <i
           onClick={() => setMobileNav(!mobileNav)}
-          class="fa-sharp fa-solid fa-xmark"
+          className="fa-sharp fa-solid fa-xmark"
         ></i>
         <div className="mobile-links">
           <Link to="/">categories</Link>
