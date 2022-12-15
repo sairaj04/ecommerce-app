@@ -1,7 +1,7 @@
 import Banner from "../components/Banner";
 import BannerReverse from "../components/BannerReverse";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Hero from "../components/Hero";
 import Newsletter from "../components/Newsletter";
 import ProudProducts from "../components/ProudProducts";
 import TrendingSlider from "../components/TrendingSlider";
@@ -11,7 +11,7 @@ import Banner2 from "../img/banner/banner2.jpg";
 function Home() {
   return (
     <>
-      <Header />
+      <Hero />
       <ProudProducts />
       <Banner
         title="Creative harmonious living"
