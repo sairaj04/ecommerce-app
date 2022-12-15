@@ -40,6 +40,41 @@
     gap: 2rem;
 }
 
+/* categories */
+
+.catego-header {
+    padding-top: 18rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -3rem;
+}
+
+.catego-header h3 {
+    font-size: 2.7rem;
+    text-transform: uppercase;
+}
+
+.catego-header a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: black;
+}
+
+.catego-header select {
+    padding: 5px;
+    background-color: #f4f4f4;
+    font-size: 16.5px;
+    font-weight: 500;
+    color: #292929;
+    cursor: pointer;
+    border: none;
+}
+
+
+
+/* queries */
+
 @media (max-width:750px) {
     .products-grid {
         display: grid;

@@ -47,6 +47,7 @@ function Navbar() {
       </div>
 
       <div
+        onClick={openCart}
         className={`page-overlay ${cart ? "open-flex" : "closed-flex"}`}
       ></div>
 
