@@ -65,8 +65,6 @@ function Navbar() {
         </div>
       </div>
 
-      {/* --------------------------------------------- */}
-
       <nav className="navbar">
         <div className="container">
           <div className={`nav-container ${sticky ? "cont-sticky" : ""}`}>
@@ -81,7 +79,7 @@ function Navbar() {
             <div className="nav-links">
               <Link to="/categories/all">categories</Link>
               <Link to="/categories/lamps">lamps</Link>
-              <Link to="/categories/forniture">furniture</Link>
+              <Link to="/categories/furnitures">furnitures</Link>
               <i onClick={openCart} className="fa-solid fa-cart-shopping"></i>
             </div>
             <div className="hamburger-menu">
