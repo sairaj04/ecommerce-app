@@ -58,7 +58,7 @@ function Navbar() {
         </div>
         <div className="cart-body">
           <div className="empty-cart">
-            <img src={EmptyCart} alt="cart image" />
+            <img src={EmptyCart} alt="empty-cart" />
             <p>Your cart is empty</p>
             <button onClick={openCart}>Keep Browsing</button>
           </div>
@@ -79,9 +79,9 @@ function Navbar() {
               />
             </Link>
             <div className="nav-links">
-              <Link to="/categories">categories</Link>
-              <Link to="/">lamps</Link>
-              <Link to="/">furniture</Link>
+              <Link to="/categories/all">categories</Link>
+              <Link to="/categories/lamps">lamps</Link>
+              <Link to="/categories/forniture">furniture</Link>
               <i onClick={openCart} className="fa-solid fa-cart-shopping"></i>
             </div>
             <div className="hamburger-menu">

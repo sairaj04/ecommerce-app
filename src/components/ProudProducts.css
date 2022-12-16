@@ -1,5 +1,5 @@
 .proud-container {
-    padding: 10rem 0;
+    padding: 11rem 0;
 }
 
 .proud-h2 {
@@ -43,17 +43,14 @@
 /* categories */
 
 .catego-header {
-    padding-top: 18rem;
+    padding-top: 17rem;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: -3rem;
+    margin-bottom: -4rem;
 }
 
-.catego-header h3 {
-    font-size: 2.7rem;
-    text-transform: uppercase;
-}
+
 
 .catego-header a {
     font-size: 1.6rem;
@@ -61,14 +58,39 @@
     color: black;
 }
 
-.catego-header select {
-    padding: 5px;
-    background-color: #f4f4f4;
-    font-size: 16.5px;
-    font-weight: 500;
-    color: #292929;
+.filter-btns {
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filter-btns button {
+    padding: .6rem 1.6rem;
     cursor: pointer;
-    border: none;
+}
+
+.title-home {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 6rem;
+}
+
+.title-home h3 {
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.title-home a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: black;
+    text-align: left;
 }
 
 

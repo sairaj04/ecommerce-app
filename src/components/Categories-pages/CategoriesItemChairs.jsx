@@ -1,12 +1,13 @@
-import { items } from "./AllData";
+import { items } from "../AllData";
 
 function CategoriesItem() {
+  const filteredItems = items.filter((item) => item.category === "chair");
   return (
     <>
       <div className="proud-container">
         <div className="container">
           <div className="products-grid">
-            {items.map((item) => (
+            {filteredItems.map((item) => (
               <div key={item.id} className="product normal">
                 <div className="product-header">
                   <img src={item.img} alt="product1" />
