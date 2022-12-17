@@ -1,10 +1,12 @@
 import "./ProudProducts.css";
-import { items } from "./Data";
+import { items } from "./AllData";
 
 function ProductItem() {
+  const filteredItems = items.filter((item) => item.id <= 8);
+
   return (
     <>
-      {items.map((item) => (
+      {filteredItems.map((item) => (
         <div key={item.id} className="product normal">
           <div className="product-header">
             <img src={item.img} alt="product1" />

@@ -1,10 +1,11 @@
 import "./TrendingSlider.css";
-import { items } from "./Data";
+import { items } from "./AllData";
 
 function TrendingItem() {
+  const filteredItems = items.filter((item) => item.id <= 8);
   return (
     <>
-      {items.map((item) => (
+      {filteredItems.map((item) => (
         <div key={item.id} className="row-item">
           <div className="item-header">
             <img src={item.img} alt="product" />
