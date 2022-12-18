@@ -18,6 +18,8 @@ import Img17 from "../img/products/17.png";
 import Img18 from "../img/products/18.png";
 import Img19 from "../img/products/19.jpg";
 import Img20 from "../img/products/20.jpg";
+import OtherImgs1 from "../img/products/otherProducts/other1.jpg";
+import OtherImgs2 from "../img/products/otherProducts/other2.jpg";
 
 export const items = [
   {
@@ -26,6 +28,9 @@ export const items = [
     img: Img1,
     description: "Little Armchair Sheepskin",
     price: 986,
+    otherImgs: [OtherImgs1, OtherImgs2],
+    specs:
+      "Tradition Little Petra VB1 Armchair Sheepskin Moonlight/ Walnut/ Brass Limited Edition | We give you a special discount when you put this product in the basket.",
   },
   {
     id: 2,
@@ -33,6 +38,7 @@ export const items = [
     img: Img2,
     description: "Pop-Up Toaster, White, 45cm",
     price: 45,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
   {
     id: 3,
@@ -40,6 +46,7 @@ export const items = [
     img: Img3,
     description: "Lamp Light Blue",
     price: 79,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
   {
     id: 4,
@@ -47,6 +54,7 @@ export const items = [
     img: Img4,
     description: "Pulp Unit - 5 Compartments",
     price: 254,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
   {
     id: 5,
@@ -54,6 +62,7 @@ export const items = [
     img: Img5,
     description: "Golden Modern Light",
     price: 189,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
   {
     id: 6,
@@ -61,6 +70,7 @@ export const items = [
     img: Img6,
     description: "Body Oil 200ml",
     price: 67,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
   {
     id: 7,
@@ -68,6 +78,7 @@ export const items = [
     img: Img7,
     description: "Black and White Lamp",
     price: 220,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
   {
     id: 8,
@@ -75,6 +86,7 @@ export const items = [
     img: Img8,
     description: "Gejst Shelf A Black Ash/Black",
     price: 115,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
   {
     id: 9,
@@ -82,6 +94,7 @@ export const items = [
     img: Img9,
     description: "Cube Lolo Vase Black",
     price: 161,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
   {
     id: 10,
@@ -89,6 +102,7 @@ export const items = [
     img: Img10,
     description: "Traditional Armchair",
     price: 89,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
   {
     id: 11,
@@ -96,6 +110,7 @@ export const items = [
     img: Img11,
     description: "The Sun Pendant Black",
     price: 160,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
   {
     id: 12,
@@ -103,6 +118,7 @@ export const items = [
     img: Img12,
     description: "Simple Golden Lamp",
     price: 220,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
   {
     id: 13,
@@ -110,6 +126,7 @@ export const items = [
     img: Img13,
     description: "Unbleached Cotton Pads 180",
     price: 33,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
   {
     id: 14,
@@ -117,6 +134,7 @@ export const items = [
     img: Img14,
     description: "Oak Spanish Chair",
     price: 520,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
   {
     id: 15,
@@ -124,6 +142,7 @@ export const items = [
     img: Img15,
     description: "Copenhagen Armchair",
     price: 330,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
   {
     id: 16,
@@ -131,6 +150,7 @@ export const items = [
     img: Img16,
     description: "Anti Dark Light",
     price: 120,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
   {
     id: 17,
@@ -138,6 +158,7 @@ export const items = [
     img: Img17,
     description: "Table Lamp",
     price: 75,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
   {
     id: 18,
@@ -145,6 +166,7 @@ export const items = [
     img: Img18,
     description: "Mat Black Lamp",
     price: 175,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
   {
     id: 19,
@@ -152,6 +174,7 @@ export const items = [
     img: Img19,
     description: "Comfy Chair",
     price: 119,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
   {
     id: 20,
@@ -159,5 +182,6 @@ export const items = [
     img: Img20,
     description: "Body Oil 50ml",
     price: 45,
+    otherImgs: "../img/products/otherProducts/1.jpg",
   },
 ];

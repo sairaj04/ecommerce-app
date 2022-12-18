@@ -2,7 +2,7 @@ import "./TrendingSlider.css";
 import { items } from "./AllData";
 
 function TrendingItem() {
-  const filteredItems = items.filter((item) => item.id <= 8);
+  const filteredItems = items.filter((item) => item.id >= 8);
   return (
     <>
       {filteredItems.map((item) => (

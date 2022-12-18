@@ -11,7 +11,13 @@ function Navbar() {
   const [cart, setCart] = useState(false);
 
   // array for cart items
-  const cartArray = [];
+  let cartObject = [];
+  // const getCartItem = () => {
+  //   for (let i = 1; i < items.length + 1; i++) {
+  //     cartObject[i] = 0;
+  //   }
+  //   return cartObject;
+  // };
 
   const handleScroll = () => {
     if (window.scrollY > 10) {
@@ -69,7 +75,7 @@ function Navbar() {
 
         {/* ?????????????????????????????? */}
         <div className="cart-body">
-          {cartArray === "" ? <EmptyCart /> : <CartWithItems />}
+          {cartObject.length < 1 ? <EmptyCart /> : <CartWithItems />}
         </div>
       </div>
 
