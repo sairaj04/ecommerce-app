@@ -9,6 +9,7 @@ import Lamps from "./components/Categories-pages/Lamps";
 import Kitchen from "./components/Categories-pages/Kitchen";
 import Chairs from "./components/Categories-pages/Chairs";
 import SkinCare from "./components/Categories-pages/SkinCare";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
           <Route path="chairs" element={<Chairs />} />
           <Route path="skin-care" element={<SkinCare />} />
         </Route>
+
+        <Route path="product" element={<ProductPage />} />
       </Routes>
     </>
   );
