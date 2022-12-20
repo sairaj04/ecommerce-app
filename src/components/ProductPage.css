@@ -182,3 +182,73 @@
 .title-desc {
     font-size: 1.65rem;
 }
+
+@media (max-width:900px) {
+    .product-right {
+        padding: 16rem 2rem 8rem 2rem;
+    }
+}
+
+@media (max-width:850px) {
+    .product-div {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        margin-bottom: 42rem;
+
+    }
+
+    .product-right {
+        width: 100%;
+        padding: 3rem 2rem 4rem 2rem;
+    }
+
+    .product-left {
+        width: 100%;
+    }
+
+    .product-big-name {
+        width: 31rem;
+        text-align: center;
+    }
+}
+
+@media (max-width:570px) {
+
+    .specifications {
+        gap: 2rem;
+        margin-bottom: 28rem;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:450px) {
+    .product-quant {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .product-spec {
+        margin-bottom: 2rem;
+    }
+
+    .atc-buy {
+        gap: 2rem;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .atc-buy button {
+        width: 100%;
+    }
+
+    .product-div {
+        margin-bottom: 50rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .product-div {
+        margin-bottom: 45rem;
+    }
+}

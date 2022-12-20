@@ -50,9 +50,18 @@ function Navbar() {
           className="fa-sharp fa-solid fa-xmark"
         ></i>
         <div className="mobile-links">
-          <Link to="/categories">categories</Link>
-          <Link to="/">lamps</Link>
-          <Link to="/">furniture</Link>
+          <Link onClick={() => setMobileNav(!mobileNav)} to="/categories/all">
+            categories
+          </Link>
+          <Link onClick={() => setMobileNav(!mobileNav)} to="/categories/lamps">
+            lamps
+          </Link>
+          <Link
+            onClick={() => setMobileNav(!mobileNav)}
+            to="/categories/furnitures"
+          >
+            furnitures
+          </Link>
         </div>
       </div>
 
