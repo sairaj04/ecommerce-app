@@ -7,6 +7,11 @@ import Footer from "../components/Footer";
 
 function ProductPage() {
   const [quantity, setQuantity] = useState(1);
+  const [image, setImage] = useState(items[0].img);
+
+  const changeImage = (e) => {
+    setImage(e.target.src);
+  };
 
   const increase = () => {
     if (quantity >= 1) {
@@ -32,12 +37,24 @@ function ProductPage() {
             <h3 className="product-big-name">Chair Sheepskin</h3>
             <div className="product-left">
               <div className="big-img">
-                <img src={items[0].img} alt="product" />
+                <img src={image} alt="product" />
               </div>
               <div className="small-imgs">
-                <img src={items[0].img} alt="product" />
-                <img src={items[0].otherImgs[0]} alt="product" />
-                <img src={items[0].otherImgs[1]} alt="product" />
+                <img
+                  onMouseOver={changeImage}
+                  src={items[0].img}
+                  alt="product"
+                />
+                <img
+                  onMouseOver={changeImage}
+                  src={items[0].otherImgs[0]}
+                  alt="product"
+                />
+                <img
+                  onMouseOver={changeImage}
+                  src={items[0].otherImgs[1]}
+                  alt="product"
+                />
               </div>
             </div>
             <div className="product-right">
