@@ -41,5 +41,6 @@
 
     .news input {
         margin-right: 0;
+        text-align: center;
     }
 }

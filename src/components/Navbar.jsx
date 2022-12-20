@@ -74,17 +74,17 @@ function Navbar() {
       {/* cart */}
       <div className={`cart-div ${cart ? "open-cart" : "closed-cart"}`}>
         <div className="cart-title-btn">
-          {cart ? (
-            <h2 className="cart-full-h2">Your Shopping Cart (0 items)</h2>
-          ) : (
-            <h2>Your Shopping Cart (0 items)</h2>
-          )}
+          <h2 className="cart-full-h2">Your Shopping Cart (0 items)</h2>
           <i onClick={openCart} className="fa-sharp fa-solid fa-xmark"></i>
         </div>
 
         {/* ?????????????????????????????? */}
         <div className="cart-body">
-          {cartObject.length < 1 ? <EmptyCart /> : <CartWithItems />}
+          {cartObject.length < 1 ? (
+            <EmptyCart openCart={openCart} />
+          ) : (
+            <CartWithItems />
+          )}
         </div>
       </div>
 
@@ -103,17 +103,8 @@ function Navbar() {
               <Link onClick={() => window.scrollTo(0, 0)} to="/categories/all">
                 categories
               </Link>
-              <Link
-                onClick={() => window.scrollTo(0, 0)}
-                to="/categories/lamps"
-              >
-                lamps
-              </Link>
-              <Link
-                onClick={() => window.scrollTo(0, 0)}
-                to="/categories/furnitures"
-              >
-                furnitures
+              <Link onClick={() => window.scrollTo(0, 0)} to="/product">
+                product page
               </Link>
               <i onClick={openCart} className="fa-solid fa-cart-shopping"></i>
             </div>

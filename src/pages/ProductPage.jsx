@@ -19,6 +19,11 @@ function ProductPage() {
       setQuantity(quantity - 1);
     }
   };
+
+  const calcPrice = (quantity) => {
+    return quantity * items[0].price;
+  };
+
   return (
     <>
       <div className="product-page-div">
@@ -44,7 +49,7 @@ function ProductPage() {
                   <p className="quantity">{quantity}</p>
                   <button onClick={increase}>+</button>
                 </div>
-                <p className="product-price">{items[0].price}.00$</p>
+                <p className="product-price">{calcPrice(quantity)}.00$</p>
               </div>
               <div className="atc-buy">
                 <button className="atc-btn">add to cart</button>
