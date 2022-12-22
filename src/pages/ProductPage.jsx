@@ -4,8 +4,9 @@ import { items } from "../components/AllData";
 import TrendingSlider from "../components/TrendingSlider";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+import { useParams } from "react-router";
 
-function ProductPage() {
+function ProductPage(props) {
   const [quantity, setQuantity] = useState(1);
   const [image, setImage] = useState(items[0].img);
 
@@ -34,7 +35,7 @@ function ProductPage() {
       <div className="product-page-div">
         <div className="container">
           <div className="product-div">
-            <h3 className="product-big-name">Chair Sheepskin</h3>
+            <h3 className="product-big-name">{items[0].description}</h3>
             <div className="product-left">
               <div className="big-img">
                 <img src={image} alt="product" />
