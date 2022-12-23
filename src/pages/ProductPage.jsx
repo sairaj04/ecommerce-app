@@ -6,9 +6,15 @@ import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import { useParams } from "react-router";
 
-function ProductPage(props) {
+function ProductPage() {
+  const { id } = useParams();
+  const item = items.filter((item) => item.id === parseInt(id));
+
   const [quantity, setQuantity] = useState(1);
-  const [image, setImage] = useState(items[0].img);
+  const [image, setImage] = useState(item[0].img);
+
+  // console.log(item);
+  // console.log(id);
 
   const changeImage = (e) => {
     setImage(e.target.src);
@@ -27,7 +33,7 @@ function ProductPage(props) {
   };
 
   const calcPrice = (quantity) => {
-    return quantity * items[0].price;
+    return quantity * item[0].price;
   };
 
   return (
@@ -35,7 +41,7 @@ function ProductPage(props) {
       <div className="product-page-div">
         <div className="container">
           <div className="product-div">
-            <h3 className="product-big-name">{items[0].description}</h3>
+            <h3 className="product-big-name">{item[0].description}</h3>
             <div className="product-left">
               <div className="big-img">
                 <img src={image} alt="product" />
@@ -43,23 +49,23 @@ function ProductPage(props) {
               <div className="small-imgs">
                 <img
                   onMouseOver={changeImage}
-                  src={items[0].img}
+                  src={item[0].img}
                   alt="product"
                 />
                 <img
                   onMouseOver={changeImage}
-                  src={items[0].otherImgs[0]}
+                  src={item[0].otherImgs[0]}
                   alt="product"
                 />
                 <img
                   onMouseOver={changeImage}
-                  src={items[0].otherImgs[1]}
+                  src={item[0].otherImgs[1]}
                   alt="product"
                 />
               </div>
             </div>
             <div className="product-right">
-              <p className="product-spec">{items[0].specs}</p>
+              <p className="product-spec">{item[0].specs}</p>
               <div className="product-quant">
                 <p>Quantity</p>
                 <div className="product-btns">
