@@ -103,7 +103,10 @@ function Navbar() {
               <Link onClick={() => window.scrollTo(0, 0)} to="/categories/all">
                 categories
               </Link>
-              <Link onClick={() => window.scrollTo(0, 0)} to="/product">
+              <Link
+                onClick={() => window.scrollTo(0, 0)}
+                to="/categories/product/19"
+              >
                 product page
               </Link>
               <i onClick={openCart} className="fa-solid fa-cart-shopping"></i>

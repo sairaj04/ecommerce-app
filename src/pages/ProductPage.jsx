@@ -85,15 +85,15 @@ function ProductPage() {
           <div className="specifications">
             <div className="spec">
               <p className="spec-title">Texture:</p>
-              <p className="title-desc">Sheep Skin</p>
+              <p className="title-desc">{item[0].texture}</p>
             </div>
             <div className="spec">
               <p className="spec-title">Weight:</p>
-              <p className="title-desc">15.3kg</p>
+              <p className="title-desc">{item[0].weight}</p>
             </div>
             <div className="spec">
               <p className="spec-title">Size:</p>
-              <p className="title-desc">90cm * 80cm * 120cm</p>
+              <p className="title-desc">{item[0].size}</p>
             </div>
           </div>
         </div>

@@ -18,10 +18,10 @@ function TrendingSlider() {
         <div className="title-btns">
           <h3>Trending Now</h3>
           <div className="btns">
-            <button onClick={slideLeft}>
+            <button title="scroll left" onClick={slideLeft}>
               <i className="fa-solid fa-arrow-left"></i>
             </button>
-            <button onClick={slideRight}>
+            <button title="scroll right" onClick={slideRight}>
               <i className="fa-solid fa-arrow-right"></i>
             </button>
           </div>
