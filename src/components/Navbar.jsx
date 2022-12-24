@@ -12,12 +12,6 @@ function Navbar() {
 
   // array for cart items
   let cartObject = [];
-  // const getCartItem = () => {
-  //   for (let i = 1; i < items.length + 1; i++) {
-  //     cartObject[i] = 0;
-  //   }
-  //   return cartObject;
-  // };
 
   const handleScroll = () => {
     if (window.scrollY > 10) {
@@ -58,9 +52,9 @@ function Navbar() {
           </Link>
           <Link
             onClick={() => setMobileNav(!mobileNav)}
-            to="/categories/furnitures"
+            to="/categories/product/19"
           >
-            furnitures
+            product page
           </Link>
         </div>
       </div>

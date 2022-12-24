@@ -13,9 +13,6 @@ function ProductPage() {
   const [quantity, setQuantity] = useState(1);
   const [image, setImage] = useState(item[0].img);
 
-  // console.log(item);
-  // console.log(id);
-
   const changeImage = (e) => {
     setImage(e.target.src);
   };
