@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Product2 from "../img/products/2.jpg";
+import { CartContext } from "../pages/ProductPage";
+import { items } from "./AllData";
 
-function CartItem() {
+function CartItem({ id }) {
   const [quantity, setQuantity] = useState(1);
 
   const increase = () => {
@@ -16,24 +18,30 @@ function CartItem() {
     }
   };
 
+  const { cartItem } = useContext(CartContext);
+
   return (
-    <div className="cart-item">
-      <div className="cart-img">
-        <img src={Product2} alt="product" />
-      </div>
-      <div className="cart-middle">
-        <p className="cart-name">Toaster</p>
-        <div className="cart-btns">
-          <button onClick={decrease}>-</button>
-          <p className="quantity">{quantity}</p>
-          <button onClick={increase}>+</button>
+    <>
+      {cartItem.map((item, id) => (
+        <div key={id} className="cart-item">
+          <div className="cart-img">
+            <img src={Product2} alt="product" />
+          </div>
+          <div className="cart-middle">
+            <p className="cart-name">{item.description}</p>
+            <div className="cart-btns">
+              <button onClick={decrease}>-</button>
+              <p className="quantity">{quantity}</p>
+              <button onClick={increase}>+</button>
+            </div>
+          </div>
+          <div className="cart-right">
+            <p className="cart-price">100.00$</p>
+            <i className="fa-sharp fa-solid fa-xmark"></i>
+          </div>
         </div>
-      </div>
-      <div className="cart-right">
-        <p className="cart-price">100.00$</p>
-        <i className="fa-sharp fa-solid fa-xmark"></i>
-      </div>
-    </div>
+      ))}
+    </>
   );
 }
 

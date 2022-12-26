@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { createContext, useContext, useState } from "react";
 import "../components/ProductPage.css";
 import { items } from "../components/AllData";
 import TrendingSlider from "../components/TrendingSlider";
@@ -6,12 +6,16 @@ import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import { useParams } from "react-router";
 
+export const CartContext = createContext();
+
 function ProductPage() {
   const { id } = useParams();
   const item = items.filter((item) => item.id === parseInt(id));
 
   const [quantity, setQuantity] = useState(1);
   const [image, setImage] = useState(item[0].img);
+
+  const { cartItem, addToCart } = useContext(CartContext);
 
   const changeImage = (e) => {
     setImage(e.target.src);
@@ -73,7 +77,9 @@ function ProductPage() {
                 <p className="product-price">{calcPrice(quantity)}.00$</p>
               </div>
               <div className="atc-buy">
-                <button className="atc-btn">add to cart</button>
+                <button onClick={addToCart} className="atc-btn">
+                  add to cart
+                </button>
                 <button className="buy-btn">buy now</button>
               </div>
             </div>

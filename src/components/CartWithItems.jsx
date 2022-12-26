@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
 import CartItem from "./CartItem";
 
-function CartWithItems() {
+function CartWithItems({ id }) {
   return (
     <>
       <div className="full-cart-div">
         <div className="full-cart">
-          <CartItem />
-          <CartItem />
-          <CartItem />
+          <CartItem id={id} />
         </div>
       </div>
       <div className="subtotal-div">

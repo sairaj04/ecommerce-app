@@ -9,11 +9,18 @@ import Lamps from "./components/Categories-pages/Lamps";
 import Kitchen from "./components/Categories-pages/Kitchen";
 import Chairs from "./components/Categories-pages/Chairs";
 import SkinCare from "./components/Categories-pages/SkinCare";
-import ProductPage from "./pages/ProductPage";
+import ProductPage, { CartContext } from "./pages/ProductPage";
+import { useState } from "react";
 
 function App() {
+  const [cartItem, setCartItem] = useState([]);
+
+  const addToCart = (item) => {
+    setCartItem([...cartItem, item]);
+  };
+
   return (
-    <>
+    <CartContext.Provider value={{ cartItem, addToCart }}>
       <Navbar />
       <Routes>
         <Route index path="/" element={<Home />} />
@@ -29,7 +36,7 @@ function App() {
         </Route>
         <Route path="categories/product/:id" element={<ProductPage />} />
       </Routes>
-    </>
+    </CartContext.Provider>
   );
 }
 

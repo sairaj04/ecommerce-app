@@ -1,14 +1,17 @@
 import "./Navbar.css";
 import LogoImg from "../img/logo.png";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import CartWithItems from "./CartWithItems";
 import EmptyCart from "./EmptyCart";
+import { CartContext } from "../pages/ProductPage";
 
 function Navbar() {
   const [sticky, setSticky] = useState(false);
   const [mobileNav, setMobileNav] = useState(false);
   const [cart, setCart] = useState(false);
+
+  const { cartItem } = useContext(CartContext);
 
   // array for cart items
   let cartObject = [];
@@ -75,9 +78,9 @@ function Navbar() {
         {/* ?????????????????????????????? */}
         <div className="cart-body">
           {cartObject.length < 1 ? (
-            <EmptyCart openCart={openCart} />
-          ) : (
             <CartWithItems />
+          ) : (
+            <EmptyCart openCart={openCart} />
           )}
         </div>
       </div>
