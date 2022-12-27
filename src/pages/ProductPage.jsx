@@ -37,6 +37,8 @@ function ProductPage() {
     return quantity * item[0].price;
   };
 
+  console.log(cartItem);
+
   return (
     <>
       <div className="product-page-div">
@@ -77,7 +79,7 @@ function ProductPage() {
                 <p className="product-price">{calcPrice(quantity)}.00$</p>
               </div>
               <div className="atc-buy">
-                <button onClick={addToCart} className="atc-btn">
+                <button onClick={() => addToCart(item[0])} className="atc-btn">
                   add to cart
                 </button>
                 <button className="buy-btn">buy now</button>

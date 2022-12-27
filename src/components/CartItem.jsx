@@ -1,10 +1,9 @@
-import { useContext, useState } from "react";
-import Product2 from "../img/products/2.jpg";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../pages/ProductPage";
-import { items } from "./AllData";
 
-function CartItem({ id }) {
+function CartItem() {
   const [quantity, setQuantity] = useState(1);
+  const { cartItem, setCartItem } = useContext(CartContext);
 
   const increase = () => {
     if (quantity >= 1) {
@@ -18,14 +17,24 @@ function CartItem({ id }) {
     }
   };
 
-  const { cartItem } = useContext(CartContext);
+  const calcPrice = (quantity, item) => {
+    return quantity * item;
+  };
+
+  const [deleteItem, setDeleteItem] = useState(cartItem);
+
+  const removeFromCart = (id) => {
+    const updateCart = deleteItem.filter((item) => item.id !== id);
+    setDeleteItem(updateCart);
+    console.log(updateCart);
+  };
 
   return (
     <>
       {cartItem.map((item, id) => (
         <div key={id} className="cart-item">
           <div className="cart-img">
-            <img src={Product2} alt="product" />
+            <img src={item.img} alt="product" />
           </div>
           <div className="cart-middle">
             <p className="cart-name">{item.description}</p>
@@ -36,8 +45,11 @@ function CartItem({ id }) {
             </div>
           </div>
           <div className="cart-right">
-            <p className="cart-price">100.00$</p>
-            <i className="fa-sharp fa-solid fa-xmark"></i>
+            <p className="cart-price">{calcPrice(quantity, item.price)}.00$</p>
+            <i
+              onClick={() => removeFromCart(item.id)}
+              className="fa-sharp fa-solid fa-xmark"
+            ></i>
           </div>
         </div>
       ))}

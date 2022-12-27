@@ -13,9 +13,6 @@ function Navbar() {
 
   const { cartItem } = useContext(CartContext);
 
-  // array for cart items
-  let cartObject = [];
-
   const handleScroll = () => {
     if (window.scrollY > 10) {
       setSticky(true);
@@ -75,12 +72,11 @@ function Navbar() {
           <i onClick={openCart} className="fa-sharp fa-solid fa-xmark"></i>
         </div>
 
-        {/* ?????????????????????????????? */}
         <div className="cart-body">
-          {cartObject.length < 1 ? (
-            <CartWithItems />
-          ) : (
+          {cartItem.length < 1 ? (
             <EmptyCart openCart={openCart} />
+          ) : (
+            <CartWithItems />
           )}
         </div>
       </div>
@@ -106,12 +102,21 @@ function Navbar() {
               >
                 product page
               </Link>
-              <i onClick={openCart} className="fa-solid fa-cart-shopping"></i>
+              <i
+                data-array-length={cartItem.length}
+                onClick={openCart}
+                className={`fa-solid fa-cart-shopping ${
+                  cartItem.length < 1 ? "cart-icon" : "cart-icon with-items"
+                }`}
+              ></i>
             </div>
             <div className="hamburger-menu">
               <i
+                data-array-length={cartItem.length}
                 onClick={openCart}
-                className="fa-solid fa-cart-shopping hamburger-cart"
+                className={`fa-solid fa-cart-shopping hamburger-cart ${
+                  cartItem.length < 1 ? "cart-icon" : "cart-icon with-items"
+                }`}
               ></i>
               <i
                 onClick={() => setMobileNav(!mobileNav)}
