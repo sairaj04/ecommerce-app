@@ -3,7 +3,7 @@
 }
 
 .product-div {
-    height: 65rem;
+    /* height: 100%; */
     margin-bottom: 10rem;
     width: 100%;
     display: flex;
@@ -195,7 +195,7 @@
         flex-direction: column;
         align-items: center;
         gap: 3rem;
-        margin-bottom: 42rem;
+        margin-bottom: 6rem;
 
     }
 
@@ -218,8 +218,8 @@
 
     .specifications {
         gap: 2rem;
-        margin-bottom: 28rem;
         flex-direction: column;
+        margin-bottom: 28rem;
     }
 }
 
@@ -243,13 +243,5 @@
         width: 100%;
     }
 
-    .product-div {
-        margin-bottom: 50rem;
-    }
-}
 
-@media (max-width: 380px) {
-    .product-div {
-        margin-bottom: 45rem;
-    }
 }

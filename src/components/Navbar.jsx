@@ -68,7 +68,9 @@ function Navbar() {
       {/* cart */}
       <div className={`cart-div ${cart ? "open-cart" : "closed-cart"}`}>
         <div className="cart-title-btn">
-          <h2 className="cart-full-h2">Your Shopping Cart (0 items)</h2>
+          <h2 className="cart-full-h2">
+            Your Shopping Cart ({cartItem.length})
+          </h2>
           <i onClick={openCart} className="fa-sharp fa-solid fa-xmark"></i>
         </div>
 

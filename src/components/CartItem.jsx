@@ -24,35 +24,46 @@ function CartItem() {
   const [deleteItem, setDeleteItem] = useState(cartItem);
 
   const removeFromCart = (id) => {
-    const updateCart = deleteItem.filter((item) => item.id !== id);
+    const updateCart = cartItem.filter((item) => item.id !== id);
     setDeleteItem(updateCart);
-    console.log(updateCart);
+    const json = JSON.stringify(cartItem.id);
+    localStorage.removeItem("cartItem", json);
   };
+
+  useEffect(() => {
+    setCartItem(deleteItem);
+  }, [deleteItem, setCartItem]);
 
   return (
     <>
-      {cartItem.map((item, id) => (
-        <div key={id} className="cart-item">
-          <div className="cart-img">
-            <img src={item.img} alt="product" />
-          </div>
-          <div className="cart-middle">
-            <p className="cart-name">{item.description}</p>
-            <div className="cart-btns">
-              <button onClick={decrease}>-</button>
-              <p className="quantity">{quantity}</p>
-              <button onClick={increase}>+</button>
+      {cartItem.length !== 0 ? (
+        cartItem.map((item, id) => (
+          <div key={id} className="cart-item">
+            <div className="cart-img">
+              <img src={item.img} alt="product" />
+            </div>
+            <div className="cart-middle">
+              <p className="cart-name">{item.description}</p>
+              <div className="cart-btns">
+                <button onClick={decrease}>-</button>
+                <p className="quantity">{quantity}</p>
+                <button onClick={increase}>+</button>
+              </div>
+            </div>
+            <div className="cart-right">
+              <p className="cart-price">
+                {calcPrice(quantity, item.price)}.00$
+              </p>
+              <i
+                onClick={() => removeFromCart(item.id)}
+                className="fa-sharp fa-solid fa-xmark"
+              ></i>
             </div>
           </div>
-          <div className="cart-right">
-            <p className="cart-price">{calcPrice(quantity, item.price)}.00$</p>
-            <i
-              onClick={() => removeFromCart(item.id)}
-              className="fa-sharp fa-solid fa-xmark"
-            ></i>
-          </div>
-        </div>
-      ))}
+        ))
+      ) : (
+        <p>no items</p>
+      )}
     </>
   );
 }

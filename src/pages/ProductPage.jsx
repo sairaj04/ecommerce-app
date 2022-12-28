@@ -15,7 +15,7 @@ function ProductPage() {
   const [quantity, setQuantity] = useState(1);
   const [image, setImage] = useState(item[0].img);
 
-  const { cartItem, addToCart } = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
 
   const changeImage = (e) => {
     setImage(e.target.src);
@@ -37,7 +37,7 @@ function ProductPage() {
     return quantity * item[0].price;
   };
 
-  console.log(cartItem);
+  // console.log(cartItem);
 
   return (
     <>

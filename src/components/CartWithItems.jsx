@@ -5,7 +5,7 @@ import { CartContext } from "../pages/ProductPage";
 import EmptyCart from "./EmptyCart";
 
 function CartWithItems() {
-  const { cartItem } = useContext(CartContext);
+  const { cartItem, setCartItem } = useContext(CartContext);
 
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -20,7 +20,7 @@ function CartWithItems() {
         <div className="full-cart">
           {cartItem.map((item, id) =>
             cartItem.length !== 0 ? (
-              <CartItem key={id} item={item} />
+              <CartItem key={id} item={item} setCartItem={setCartItem} />
             ) : (
               <EmptyCart key={id} />
             )
