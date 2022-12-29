@@ -184,6 +184,46 @@
     font-size: 1.65rem;
 }
 
+/* notify */
+
+.notify {
+    color: white;
+    background-color: #373737;
+    padding: 1.2rem 2.2rem;
+    z-index: 999999999;
+    font-size: 2rem;
+    position: absolute;
+    transform: translate(-50%);
+    top: -100%;
+    left: 50%;
+}
+
+.notify.slide-in {
+    animation-duration: 4s;
+    animation-delay: -1s;
+    animation-name: slidein;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+    0% {
+        top: -100%;
+    }
+
+    40% {
+        top: 90px;
+    }
+
+    60% {
+        top: 90px;
+    }
+
+    100% {
+        top: -100%;
+    }
+}
+
 @media (max-width:900px) {
     .product-right {
         padding: 16rem 2rem 8rem 2rem;
