@@ -2,7 +2,7 @@
 
 <h2>About the project</h2>
 
-<p>RAOUFラウフ is an minimalistic eCommerce website that lifestyle enthusiasts can buy from.</p>
+<p><b>RAOUFラウフ</b> is an minimalistic eCommerce website that lifestyle enthusiasts can buy from.</p>
 
 <h3>Build with:</h3>
 
