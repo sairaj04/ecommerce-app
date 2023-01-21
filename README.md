@@ -15,11 +15,7 @@
 <h3 align='center'>Home Page 🏡</h3>
 
 <div align='center'>
-<img src='https://user-images.githubusercontent.com/105128267/210107094-ad625608-aeb5-40bc-93ad-894605ac228b.png'/>
-<img src='https://user-images.githubusercontent.com/105128267/210107202-4c01c2f8-685f-4307-ab61-100c1ab7ceca.png'/>
-<img src='https://user-images.githubusercontent.com/105128267/210107237-3c7a862e-ec13-405d-9e25-f67f368e2efc.png'/>
-<img src='https://user-images.githubusercontent.com/105128267/210107323-2c2f0faa-01d5-4981-a4d7-8e7a9e121aa9.png'/>
-<img src='https://user-images.githubusercontent.com/105128267/210107354-e2de0a63-8e27-489a-8474-8cafbc895792.png'/>
+<img src='https://user-images.githubusercontent.com/105128267/213868640-e3421f0a-bb10-4352-82a1-1bda4df821e9.png'/>
 </div>
 
 <br><br>
