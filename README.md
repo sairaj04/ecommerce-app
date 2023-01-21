@@ -22,32 +22,21 @@
 <h3 align='center'>Categories Page 👇</h3>
 
 <div align='center'>
-<img src='https://user-images.githubusercontent.com/105128267/210107605-9f857dcc-20f4-4542-85bd-ffe5f40d4423.png'/>
-<img src='https://user-images.githubusercontent.com/105128267/210107646-52769aad-2ba2-47b8-a430-91da62b4682c.png'/>
-<br>
-
-<h3 align='center'>Categories Page - Filtered</h3>
-
-<img src='https://user-images.githubusercontent.com/105128267/210107737-98ca59ce-ef33-4a02-9212-d812685e5737.png'/>
-</div>
+<img src='https://user-images.githubusercontent.com/105128267/213868668-55c03494-0835-43e0-9cb1-429b9a243a65.png'/>
 
 <br>
 <br>
 <h3 align='center'>Product Page 🎁</h3>
 
 <div align='center'>
-<img src='https://user-images.githubusercontent.com/105128267/210107816-038e75df-6032-4783-881a-e0172071b8e1.png'/>
-<img src='https://user-images.githubusercontent.com/105128267/210108013-5fa40f8d-1a87-47d6-84fd-9193ce20a3e1.png'/>
-</div>
-
+<img src='https://user-images.githubusercontent.com/105128267/213868690-5737cead-a56e-4500-88ff-d182426ce072.png'/>
 
 <br>
 <br>
 <h3 align='center'>Shopping Cart 🛒</h3>
 
 <div align='center'>
-<img src='https://user-images.githubusercontent.com/105128267/210107894-d593d609-599d-44c3-acc8-dacd42e71b1c.png'/>
-<img src='https://user-images.githubusercontent.com/105128267/210107944-9b7dabd2-4a7f-45b1-8b9a-37acf625d696.png'/>
+<img src='https://user-images.githubusercontent.com/105128267/213868718-6760d6de-9060-406f-816d-f9b317bb0e0c.png'/>
 </div>
 
 
