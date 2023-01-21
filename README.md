@@ -4,9 +4,9 @@
 
 <p><b>RAOUFラウフ</b> is an minimalistic eCommerce website that lifestyle enthusiasts can buy from.</p>
 
-<h3>Build with:</h3>
-
 👉 Live Demo: <a href='https://minimalist-e-commerce.vercel.app/'>Raouf Demo</a>
+
+<h3>Build with:</h3>
 
 » HTML <br>
 » Vanila CSS <br>
