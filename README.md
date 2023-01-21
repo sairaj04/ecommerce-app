@@ -6,6 +6,8 @@
 
 <h3>Build with:</h3>
 
+👉 Live Demo: <a href='https://minimalist-e-commerce.vercel.app/'>Raouf Demo</a>
+
 » HTML <br>
 » Vanila CSS <br>
 » React JS
