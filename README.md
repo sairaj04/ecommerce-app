@@ -8,7 +8,6 @@
 
 <h3>Build with:</h3>
 
-» HTML <br>
 » Vanila CSS <br>
 » React JS
 
