@@ -4,7 +4,7 @@
 
 <p><b>RAOUFラウフ</b> is an minimalistic eCommerce website that lifestyle enthusiasts can buy from.</p>
 
-👉 Live Demo: <a href='https://minimalist-e-commerce.vercel.app/'>Raouf Demo</a>
+👉 Live Demo: <a href='https://minimalist-e-commerce.vercel.app/'>Ecommerce Demo</a>
 
 <h3>Build with:</h3>
 
