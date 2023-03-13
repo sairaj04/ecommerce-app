@@ -29,7 +29,8 @@
 }
 
 .logo-img {
-    width: 13rem;
+    width: 8.5rem;
+    height: auto;
     cursor: pointer;
 }
 

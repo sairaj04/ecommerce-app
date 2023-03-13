@@ -1,5 +1,6 @@
 import "./Navbar.css";
-import LogoImg from "../img/logo.png";
+
+import LogoImg2 from "../img/newlogo2.png";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import CartWithItems from "./CartWithItems";
@@ -89,7 +90,7 @@ function Navbar() {
             <Link to="/">
               <img
                 onClick={scrollToTop}
-                src={LogoImg}
+                src={LogoImg2}
                 alt="logo"
                 className="logo-img"
               />
