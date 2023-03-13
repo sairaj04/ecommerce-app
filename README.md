@@ -1,8 +1,8 @@
-<div align='center'><img src='https://user-images.githubusercontent.com/105128267/210105653-4c10eefd-7150-4b0a-8d8a-4f9cdda36b06.png'/></div>
+<div align='center'><img src='https://user-images.githubusercontent.com/105128267/224688338-8f1f28b7-029b-4ed7-a567-86de0c44ff42.png'/></div>
 
 <h2>About the project</h2>
 
-<p><b>RAOUFラウフ</b> is an minimalistic eCommerce website that lifestyle enthusiasts can buy from.</p>
+<p><b>Minimalist Ecommerce</b> is an eCommerce website that lifestyle enthusiasts can buy from.</p>
 
 👉 Live Demo: <a href='https://minimalist-e-commerce.vercel.app/'>Ecommerce Demo</a>
 
