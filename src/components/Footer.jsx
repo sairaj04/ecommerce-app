@@ -12,17 +12,6 @@ function Footer() {
           <a href="#">Careers</a>
           <a href="#">Contact Us</a>
         </div>
-        <p className="love">
-          Design &nbsp; by{" "}
-          <a
-            target="_blank"
-            rel="noreferrer"
-            style={{ color: "white" }}
-            href="https://github.com/Abderraouf-Rahmani"
-          >
-            &nbsp; Abderraouf
-          </a>
-        </p>
       </footer>
     </>
   );
