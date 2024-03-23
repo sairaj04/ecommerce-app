@@ -108,6 +108,9 @@ function Navbar() {
               </i>
             </div>
             <div className="hamburger-menu">
+              <Link to="/">
+                <h1 className="logo">Ecommerce App</h1>
+              </Link>
               <i
                 data-array-length={cartItem.length}
                 onClick={openCart}

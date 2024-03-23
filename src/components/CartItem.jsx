@@ -6,17 +6,17 @@ function CartItem() {
   const [quantity, setQuantity] = useState(1);
   const { cartItem, setCartItem } = useContext(CartContext);
 
-  const increase = () => {
-    if (quantity >= 1) {
-      setQuantity(quantity + 1);
-    }
-  };
+  // const increase = () => {
+  //   if (quantity >= 1) {
+  //     setQuantity(quantity + 1);
+  //   }
+  // };
 
-  const decrease = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
+  // const decrease = () => {
+  //   if (quantity > 1) {
+  //     setQuantity(quantity - 1);
+  //   }
+  // };
 
   const calcPrice = (quantity, item) => {
     return quantity * item;
@@ -24,11 +24,21 @@ function CartItem() {
 
   const [deleteItem, setDeleteItem] = useState(cartItem);
 
+  // const removeFromCart = (id) => {
+  //   const updateCart = cartItem.filter((item) => item.id !== id);
+  //   setDeleteItem(updateCart);
+  //   const json = JSON.stringify(cartItem.id);
+  //   localStorage.removeItem("cartItem", json);
+  // };
+
   const removeFromCart = (id) => {
-    const updateCart = cartItem.filter((item) => item.id !== id);
-    setDeleteItem(updateCart);
-    const json = JSON.stringify(cartItem.id);
-    localStorage.removeItem("cartItem", json);
+    const indexToRemove = cartItem.findIndex((item) => item.id === id);
+    if (indexToRemove !== -1) {
+      const updatedCart = [...cartItem];
+      updatedCart.splice(indexToRemove, 1);
+      setCartItem(updatedCart);
+      localStorage.setItem("cartItem", JSON.stringify(updatedCart));
+    }
   };
 
   useEffect(() => {
@@ -45,9 +55,9 @@ function CartItem() {
           <div className="cart-middle">
             <p className="cart-name">{item.description}</p>
             <div className="cart-btns">
-              <button onClick={decrease}>-</button>
-              <p className="quantity">{quantity}</p>
-              <button onClick={increase}>+</button>
+              {/* <button onClick={decrease}>-</button> */}
+              <p className="quantity">{cartItem.length}</p>
+              {/* <button onClick={increase}>+</button> */}
             </div>
           </div>
           <div className="cart-right">
