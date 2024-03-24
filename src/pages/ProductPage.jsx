@@ -92,7 +92,12 @@ function ProductPage() {
               <div className="atc-buy">
                 <button
                   onClick={() => {
-                    addToCart(item[0]);
+                    for (let i = 0; i < quantity; i++) {
+                      addToCart({
+                        ...item[0],
+                        id: Date.now(),
+                      });
+                    }
                     showNotify();
                   }}
                   className="atc-btn"

@@ -2,9 +2,9 @@ import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../pages/ProductPage";
 import { IconX } from "@tabler/icons-react";
 
-function CartItem() {
+function CartItem({item, setCartItem}) {
   const [quantity, setQuantity] = useState(1);
-  const { cartItem, setCartItem } = useContext(CartContext);
+  const { cartItem } = useContext(CartContext);
 
   // const increase = () => {
   //   if (quantity >= 1) {
@@ -24,21 +24,11 @@ function CartItem() {
 
   const [deleteItem, setDeleteItem] = useState(cartItem);
 
-  // const removeFromCart = (id) => {
-  //   const updateCart = cartItem.filter((item) => item.id !== id);
-  //   setDeleteItem(updateCart);
-  //   const json = JSON.stringify(cartItem.id);
-  //   localStorage.removeItem("cartItem", json);
-  // };
-
   const removeFromCart = (id) => {
-    const indexToRemove = cartItem.findIndex((item) => item.id === id);
-    if (indexToRemove !== -1) {
-      const updatedCart = [...cartItem];
-      updatedCart.splice(indexToRemove, 1);
-      setCartItem(updatedCart);
-      localStorage.setItem("cartItem", JSON.stringify(updatedCart));
-    }
+    const updateCart = cartItem.filter((item) => item.id !== id);
+    setDeleteItem(updateCart);
+    const json = JSON.stringify(cartItem.id);
+    localStorage.removeItem("cartItem", json);
   };
 
   useEffect(() => {
@@ -47,17 +37,14 @@ function CartItem() {
 
   return (
     <>
-      {cartItem.map((item, id) => (
-        <div key={id} className="cart-item">
+        <div className="cart-item">
           <div className="cart-img">
             <img src={item.img} alt="product" />
-          </div>
+            </div>
           <div className="cart-middle">
             <p className="cart-name">{item.description}</p>
             <div className="cart-btns">
-              {/* <button onClick={decrease}>-</button> */}
               <p className="quantity">{cartItem.length}</p>
-              {/* <button onClick={increase}>+</button> */}
             </div>
           </div>
           <div className="cart-right">
@@ -65,7 +52,6 @@ function CartItem() {
             <IconX onClick={() => removeFromCart(item.id)} />
           </div>
         </div>
-      ))}
     </>
   );
 }

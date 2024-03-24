@@ -16,7 +16,7 @@ function App() {
   const [cartItem, setCartItem] = useState([]);
 
   const addToCart = (item) => {
-    setCartItem([...cartItem, item]);
+    setCartItem((e) => [...e, item]);
   };
 
   // local storage
